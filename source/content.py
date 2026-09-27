@@ -1,0 +1,176 @@
+"""Isi portofolio (v3, format presentasi interview). Faktual, tanpa kalimat hiasan."""
+
+PROFILE = dict(
+    first="Shionita Dwilani", last="Nainggolan",
+    roles=["AI Engineer", "Data Scientist", "Data Analyst"],
+    summary=("Lulusan Matematika ITB. Berpengalaman membangun model computer vision, pipeline AI untuk chatbot RAG, model prediktif, "
+             "pipeline machine learning, dan dashboard analisis data di startup AI, instansi pemerintah, dan organisasi internasional."),
+    location="Tangerang Selatan", email="shionitanainggolan@gmail.com", phone="085373436003", wa="6285373436003",
+    linkedin="linkedin.com/in/shionita", github="github.com/shionita03",
+)
+KEYFACTS = [("Posisi saat ini", "AI Engineer, Cakra AI"), ("Pendidikan", "S1 Matematika ITB"),
+            ("Pengalaman kerja", "6 posisi sejak 2024"), ("Pelatihan", "Bangkit Academy, Kemendikdasmen")]
+
+EDU = dict(school="Institut Teknologi Bandung", degree="Sarjana Matematika", faculty="FMIPA",
+           period="Agu 2021 – Agu 2025", gpa="3,39 / 4,00",
+           focus=["Metode numerik", "Statistika biologi", "Pemodelan matematika", "Teori peluang"],
+           thesis="Tugas akhir: Analisis Reliabilitas, Perbaikan Berkelanjutan Mesin Jet di Industri Penerbangan (lihat bagian Proyek)",
+           activity=["Asisten praktikum dan asisten dosen (lihat bagian Kegiatan lain)",
+                     "Anggota HIMATIKA, Solve-It, Skhole, dan PMK ITB"])
+
+TRAININGS = [
+    dict(id="bangkit", disc="ai ds", org="Bangkit Academy", role="Machine Learning Cohort", period="Sep 2024 – Jan 2025",
+         place="Remote, diselenggarakan Google, GoTo, dan Traveloka", mono="BA",
+         context="Program pelatihan intensif machine learning bersertifikat untuk talenta teknologi Indonesia.",
+         did=["Menyelesaikan 900+ jam pelatihan: machine learning, deep learning, TensorFlow, generative AI, dan deployment model.",
+              "Capstone: aplikasi rekomendasi wisata Bali dengan analisis sentimen (NLP) dan content-based filtering, dilengkapi pencatat pengeluaran wisata."],
+         results=["Akurasi model rekomendasi > 80%", "Lulus dengan sertifikat spesialisasi Machine Learning"],
+         tags=["TensorFlow", "NLP", "Recommender System"],
+         docs=[("Sertifikat", [("p6", "Certificate of Completion, spesialisasi Machine Learning."), ("p7", "Student Learning Achievement.")]),
+               ("Capstone", [("p10", "Rekomendasi wisata berdasarkan kategori, kota, rating, dan harga."),
+                             ("p9", "Ulasan pengguna diklasifikasikan sentimennya secara otomatis."),
+                             ("p8", "Pencatat anggaran dan pengeluaran harian.")])]),
+    dict(id="kemendik", disc="ds da", org="Kemendikdasmen", role="Data Science Trainee", period="Apr 2025 – Agu 2025", place="Remote", mono="KD",
+         context="Program data science Kementerian Pendidikan Dasar dan Menengah.",
+         did=["Membangun model regresi logistik untuk memprediksi anak putus sekolah.",
+              "Membuat dashboard pemantauan putus sekolah nasional: sebaran per provinsi, jenjang, dan status sekolah.",
+              "Mempresentasikan hasil analisis di akhir program."],
+         results=["Kerangka prediksi sebagai dasar strategi intervensi", "Sertifikat di akhir program"],
+         tags=["Regresi Logistik", "Dashboard", "Statistik"],
+         docs=[("Dashboard putus sekolah nasional", [("p15", "Dashboard Pemantauan Putus Sekolah Nasional.")]),
+               ("Presentasi", [("p14", "Presentasi analisis persebaran anak putus sekolah."), ("p13", "Penyerahan sertifikat.")])]),
+]
+
+# Timeline: (label, mulai, selesai, anchor, jenis)
+TIMELINE = [
+    ("PKL BPS Kaltim", (2024, 8), (2024, 9), "bps", "work"),
+    ("Asisten praktikum ITB", (2024, 9), (2025, 1), "kegiatan", "work"),
+    ("Wikimedia Indonesia", (2025, 2), (2025, 5), "wikimedia", "work"),
+    ("ITB Career Center", (2025, 3), (2025, 6), "itbcc", "work"),
+    ("Magpie", (2025, 5), (2026, 2), "magpie", "work"),
+    ("Cakra AI", (2026, 2), (2026, 9), "cakra", "now"),
+]
+
+# Pengalaman: konteks -> yang dikerjakan -> hasil -> dokumentasi. Urutan: terbaru dulu.
+EXPERIENCES = [
+    dict(id="cakra", disc="ai ds", org="Cakra AI", role="AI Engineer", period="Feb 2026 – sekarang", place="Tangerang Selatan", mono="CA",
+         context="Startup AI yang membangun solusi untuk akuakultur, perkebunan, dan layanan keuangan.",
+         did=["Membangun model computer vision untuk menghitung benur (larva udang) dan mengklasifikasikan buah sawit matang/mentah.",
+              "Mengembangkan sisi AI dan backend chatbot RAG: pemrosesan dokumen, retrieval, integrasi LLM, deployment, dan monitoring.",
+              "Membangun sistem evaluasi kualitas agen berbasis test set yang bisa dijalankan ulang.",
+              "Membuat model optimasi dan prediksi pertumbuhan untuk budidaya udang.",
+              "Mendefinisikan kebutuhan teknis bersama klien dan menyampaikan laporan progres mingguan.",
+              "Berkolaborasi dengan tim frontend yang membangun antarmuka aplikasi."],
+         results=["Hitung benur: 701 (AI) vs 718 (manual) pada contoh uji", "Skor evaluasi chatbot hingga 96% pada 76 pertanyaan"],
+         tags=["Computer Vision", "RAG", "LLM", "Forecasting", "Python"],
+         docs=[("Benur Counter", [("d0", "Hasil hitung manual vs AI; setiap deteksi ditandai titik biru.")],
+                "Model computer vision yang mendeteksi dan menghitung benur.", "dibuat oleh tim frontend Cakra AI"),
+               ("Chatbot RAG", [("d2", "Jawaban beserta proses reasoning, dokumen sumber, dan halaman rujukan."),
+                                ("d1", "Halaman Agent Quality: riwayat pengujian dan skor setiap run.")],
+                "Pipeline RAG (pemrosesan dokumen, retrieval, integrasi LLM) dan sistem evaluasi kualitas agen.", "dibuat oleh tim frontend Cakra AI"),
+               ("Data budidaya", [("d3", "Pemantauan parameter tambak: aktual, prediksi, dan batas ideal.")],
+                "Model prediksi dan pengolahan data budidaya yang ditampilkan.", "dibuat oleh tim frontend Cakra AI")]),
+    dict(id="magpie", disc="da", org="Magpie", role="Associate Consultant Intern", period="Mei 2025 – Feb 2026", place="Remote", logo="p22",
+         note="Dipromosikan dari Data Entry Intern",
+         context="Konsultan brand protection. Klien utama: Herbalife Indonesia, memberantas produk pelanggar di e-commerce.",
+         did=["Mengotomasi pelaporan produk pelanggar ke TikTok IPPC (input batch hingga 100 URL per laporan).",
+              "Membangun dashboard performa e-commerce dengan Google BigQuery dan Looker Studio.",
+              "Melabeli dan melakukan QA data produk di internal tool untuk menjaga integritas data.",
+              "Mempresentasikan insight dalam rapat mingguan bersama stakeholder."],
+         results=["Waktu proses manual dan tingkat kesalahan pelaporan berkurang", "Shopee: 355 dari 359 produk yang dilaporkan disetujui"],
+         tags=["BigQuery", "Looker Studio", "SQL", "Otomasi"],
+         docs=[("Otomasi pelaporan TikTok IPPC", [("d4", "Input batch URL dan pemilihan produk objek keluhan."),
+                                                 ("d5", "Formulir informasi IP dan keluhan.")],
+                "Otomasi pengisian dan pengiriman laporan produk pelanggar.", "portal resmi milik TikTok"),
+               ("Dashboard pelaporan produk", [("p24", "Product List Reporting di Looker Studio per platform. Query dan desain dashboard dibuat oleh saya.")]),
+               ("Pelabelan data", [("p23", "Log pelabelan dan QA produk.")],
+                "Pelabelan dan QA data produk.", "internal tool milik Magpie")]),
+    dict(id="itbcc", disc="da ds", org="ITB Career Center", role="Data Analyst Intern", period="Mar 2025 – Jun 2025", place="Bandung", logo="p27",
+         context="Nama tempat kerja alumni ditulis tidak konsisten (misalnya \"BCA\", \"Menara BCA\", \"PT Bank Central Asia Tbk\").",
+         did=["Membangun pipeline entity matching untuk menyamakan nama perusahaan ke nama resmi.",
+              "Menerapkan active learning: prediksi dengan confidence > 0,9 dilabeli otomatis, sisanya dilabeli manual.",
+              "Membuat fitur dari 4 metrik kemiripan untuk nama perusahaan dan alamat.",
+              "Membuat visualisasi Python tentang tempat kerja alumni dan kepuasan pemberi kerja."],
+         results=["Nama perusahaan alumni terstandardisasi dan siap dianalisis"],
+         tags=["Entity Matching", "Active Learning", "Python"],
+         docs=[("Alur pipeline", [("p29", "Flowchart: data cleaning, proses data, active learning, test model.")]),
+               ("Data dan hasil", [("d6", "Data mentah: satu perusahaan ditulis dengan banyak variasi (misalnya PT Bank Central Asia Tbk. dan PT Bank Central Asia)."), ("d7", "Hasil standardisasi: jumlah alumni per nama resmi perusahaan.")])]),
+    dict(id="wikimedia", disc="da", org="Wikimedia Indonesia", role="Data Analyst Intern", period="Feb 2025 – Mei 2025", place="Jakarta Pusat (Hybrid)", logo="p32",
+         context="Program pemagangan Wikidata untuk memperkaya data terbuka tentang Indonesia.",
+         did=["Menulis kueri SPARQL untuk mengambil, menyunting, dan menambahkan data di Wikidata.",
+              "Menganalisis data artis Indonesia: uji Mann-Whitney U dan proyeksi 5 tahun dengan deret waktu.",
+              "Membantu mengelola kompetisi visualisasi data nasional dan menulis artikel teknis."],
+         results=["Uji Mann-Whitney U: perbedaan umur mulai berkarier signifikan (p = 0,00075)"],
+         tags=["SPARQL", "Uji Statistik", "Time Series"],
+         docs=[("Kueri dan analisis", [("p34", "Kueri SPARQL berdasarkan profesi."), ("p33", "Poster analisis artis Indonesia.")])]),
+    dict(id="aksara", disc="da", org="PT Usaha Insan Aksara", role="Social Media Development Intern", period="2025", place="Remote", logo="p19",
+         context="Pengelolaan media sosial aplikasi baca Lontara dan UI Aksara.",
+         did=["Menganalisis view, like, dan komentar Instagram Lontara dan UI Aksara.",
+              "Merencanakan dan membuat konten berdasarkan hasil analisis."],
+         results=[], tags=["Social Media Analytics"],
+         docs=[("Konten Instagram", [("p18", "Contoh konten yang dibuat.")])]),
+    dict(id="bps", disc="da", org="BPS Provinsi Kalimantan Timur", role="PKL, Statistik Produksi", period="Agu 2024", place="Samarinda", logo="p37",
+         context="Praktik kerja lapangan di bidang statistik produksi.",
+         did=["Mengolah data produksi: pertanian, peternakan, perikanan, kehutanan, industri, pertambangan dan energi, serta konstruksi."],
+         results=["Predikat \"Sangat Baik\""], tags=["Statistik Resmi"],
+         docs=[("Sertifikat", [("p38", "Sertifikat PKL.")])]),
+]
+
+PROJECTS = [
+    dict(title="Analisis reliabilitas mesin jet", sub="Tugas Akhir S1 Matematika ITB", period="Sep 2024 – Jun 2025", tools="Python",
+         problem="Mengidentifikasi faktor yang mempercepat kegagalan mesin jet dan memprediksi keandalannya, sebagai dasar keputusan perawatan.",
+         method="Data NASA 100 mesin jet komersial. Fishbone untuk memetakan penyebab, K-Means (3 klaster sisa umur/RUL), analisis Pareto untuk zona kritis, fitting distribusi (log-normal terbaik berdasarkan AIC/BIC), dan model Cox time-dependent.",
+         findings=[("92% → 23% → 2%", "Keandalan mesin pada 100, 200, dan 300 siklus"),
+                   ("5,09×", "Risiko kegagalan per kenaikan suhu outlet LPT (T50)"),
+                   ("0,97", "Concordance model Cox time-dependent")],
+         imgs=[("t1", "Diagram Fishbone penyebab kegagalan mesin jet."),
+               ("t12", "Klasterisasi K-Means berdasarkan sisa umur (RUL)."),
+               ("t26", "Fungsi keandalan log-normal terhadap waktu penggunaan."),
+               ("t27", "Hazard ratio model Cox time-dependent (interval kepercayaan 95%).")]),
+    dict(title="Optimasi alat GeneXpert untuk diagnosis TB", period="Feb – Mei 2024", tools="Python, Excel",
+         problem="Menentukan jumlah alat GeneXpert yang optimal per kabupaten/kota di Jawa Barat.",
+         method="Analisis spasial sebaran kasus TB dan pemodelan statistik.",
+         imgs=[("p42", "Peta kasus TB dan alat Xpert Jawa Barat 2023."), ("p41", "Rekomendasi jumlah alat per kabupaten/kota.")]),
+    dict(title="Efektivitas kemoterapi leukemia (LLA)", period="", tools="Matlab",
+         problem="Mencari laju dan konsentrasi obat kemoterapi yang efektif.",
+         method="Sistem persamaan diferensial logistik, Runge-Kutta orde 4.",
+         imgs=[("p49", "Poster model kemoterapi LLA.")]),
+]
+
+COMPETITION = dict(
+    name="Satria Data 2023", full="Statistika Ria dan Festival Sains Data, kompetisi data tingkat nasional",
+    rank="Top 15 Nasional", period="Jun – Agu 2023", tools="R, Excel",
+    title="Analisis penjualan mobil listrik terhadap konsumsi listrik dan emisi di Indonesia",
+    problem="Bagaimana pertumbuhan mobil listrik memengaruhi konsumsi listrik dan emisi bahan bakar di Indonesia, dan tantangan apa yang muncul ke depan?",
+    method=["Mengolah data penjualan mobil listrik 2019–2022 per jenis (PHEV, HEV, BEV).",
+            "Memodelkan emisi bahan bakar cair dengan deret waktu ARIMA(2,2,1) di R.",
+            "Memproyeksikan emisi 10 tahun ke depan beserta selang kepercayaan 80% dan 95%.",
+            "Menyusun rekomendasi solusi untuk tantangan yang muncul."],
+    findings=[("812 → 15.437", "Penjualan mobil listrik 2019 ke 2022"),
+              ("0 → 10.327", "Penjualan BEV (listrik murni) 2019 ke 2022"),
+              ("1.173 kWh", "Konsumsi listrik per kapita 2022, naik 6,2% dari 2021")],
+    method_short="Analisis data penjualan mobil listrik 2019–2022 dan forecast emisi bahan bakar cair 10 tahun dengan ARIMA(2,2,1) di R.",
+    conclusion="Emisi bahan bakar cair diproyeksikan masih naik dalam 10 tahun ke depan, tetapi kenaikannya mulai melandai. Mobil listrik menjadi salah satu faktor naiknya konsumsi listrik per kapita.",
+    docs=[("p45", "Forecast emisi bahan bakar cair dengan ARIMA(2,2,1)."),
+          ("p46", "Data penjualan mobil listrik di Indonesia 2019–2022.")])
+
+TEACHING = [
+    dict(title="Asisten praktikum & dosen", org="Institut Teknologi Bandung", period="Sep 2024 – Jan 2025", logos=["p54"],
+         points=["Asisten laboratorium Metode Numerik (Python) untuk mahasiswa Aktuaria; membimbing 54 mahasiswa.",
+                 "Asisten Matematika Numerik (Matlab) dan Metode Matematika (Python).",
+                 "Asisten praktikum Biostatistika dan asisten dosen Analisis Data."],
+         imgs=[("p57", "Bersama mahasiswa di lab komputer ITB.")]),
+    dict(title="Pengajar freelance", org="Marwell Education, Bimbingan PMUI", period="", logos=["p53", "p52"],
+         points=["Matematika, fisika, dan kimia untuk SMA serta persiapan UTBK/SNBT.",
+                 "Matematika untuk SD, SMP, dan SMA."], imgs=[]),
+]
+ORGS = [("p60", "HIMATIKA ITB", "Himpunan mahasiswa Matematika"), ("p61", "Solve-It", "Unit riset"),
+        ("p59", "Skhole ITB", "Unit pengajaran"), ("p58", "PMK ITB", "Unit kerohanian")]
+ORG_PHOTOS = [("p64", "Kegiatan himpunan."), ("p65", "Bersama anggota organisasi."), ("p66", "Rapat daring."), ("p67", "Kumpul anggota.")]
+
+SKILL_GROUPS = [
+    ("ai", "AI Engineering", ["Computer vision", "RAG & LLM", "Evaluasi agen", "Deep learning (TensorFlow)", "NLP", "Deployment"], ["cakra"]),
+    ("ds", "Data Science", ["Regresi logistik", "Regresi Cox", "Time series (ARIMA)", "Active learning", "Uji hipotesis", "Persamaan diferensial"], ["cakra", "kemendik", "itbcc"]),
+    ("da", "Data Analysis", ["SQL & BigQuery", "Looker Studio", "Tableau", "Excel", "SPARQL", "Data cleaning"], ["magpie", "itbcc", "wikimedia", "bps"]),
+]
+TOOLS = "Python, R, SQL, Matlab, Jupyter, Google Colab, VS Code, RStudio, GitHub, DBeaver"
